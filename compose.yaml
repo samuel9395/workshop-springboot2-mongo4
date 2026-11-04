@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mongo:latest
+    container_name: mongo1
+    ports:
+      - 27017:27017
+    volumes:
+      - db-data:/data/db
+
+volumes:
+  db-data:
