@@ -1,0 +1,17 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - db-data:/data/db
+    networks:
+      - springboot-mongo-network
+
+volumes:
+  db-data:
+
+networks:
+  springboot-mongo-network:
+    driver: bridge
